@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+    <style>
+        body {
+  width: 680px;
+  background-color: whitesmoke;
+  padding-left: 50px;
+  
+  
+  
+
+}
+.categories {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  padding-bottom: 20px;
+  color: whitesmoke;
+}
+
+ img {
+     width: 100%;
+     border-top: black;
+ }
+ .title {
+     font-size: 30px;
+     color: black;
+     text-decoration-line: none;
+ }
+
+ }
+ a {
+     text-decoration-line: none;
+     font-size: 20px;
+     color: black;
+ }
+ p {
+     color: black;
+     font-size: 16px;
+ }
+ .wrapper {
+   width:960px;
+   margin:auto
+ }
+ .cat {
+     color: black;
+     text-decoration-line: none;
+    }
+     h2 {
+       padding-left: 50px;
+     }
+ }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <ul class="categories">
+    {{#each category}}
+      <li>
+        <a href="/news/category/{{_id}}" class="cat">{{name}}</a>
+      </li>
+    {{/each}}
+  </ul>
+  <hr>
+    </header>
+    
+
+    <div class="header"></div>
+     <div class="line"></div>
+  {{{body}}}  
+  <div class="footer"></div>
+
+</body>
+</html>

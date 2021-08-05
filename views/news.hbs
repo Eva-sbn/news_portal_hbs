@@ -1,0 +1,10 @@
+<h2>Все новости</h2>
+<hr>
+<ul>
+    {{#if news}}
+    {{#each news}}
+        <a href="/news/{{_id}}" class="title">{{title}}</a>
+        <img src="{{img}}" width="40%">
+    {{/each}}
+    {{/if}}
+</ul>
